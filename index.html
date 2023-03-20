@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Eletrônico</title>
+</head>
+<body>
+    VALOR A SER SACADO: 
+    <input type="text" id="valor">
+    <button onclick="Sacar()";> SACAR </button>
+    <div id="resultado"> </div>
+</body>
+<script>
+    function Sacar()
+    {
+        v = parseInt(valor.value);
+        if (v%10==0)
+        {
+            quantidade = v / 10;
+
+            resultado.innerHTML = quantidade + " NOTAS DE R$ 10"; 
+
+            for(x=1;x<=quantidade;x++)
+            {
+                resultado.innerHTML += "<br> <br> <img src='nota10.png' width= '100px'> ";
+            }
+        }
+        else
+        {
+            alert("VALOR INCORRETO...");
+        }
+    }
+</script>
+</html>
